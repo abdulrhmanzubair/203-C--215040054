@@ -85,8 +85,8 @@ namespace DGD203_2
 
         private void GetPlayerName()
         {
-            Console.WriteLine("we welcome you guradian of the land!");
-            Console.WriteLine("Would you be kind enough to provide us with your esteem name?");
+            Console.WriteLine("Welcome to the most awesomest RPG game of all time!");
+            Console.WriteLine("Would you be kind enough to provide us with your name?");
             _playerName = Console.ReadLine();
 
             if (_playerName == "Johnny")
@@ -139,16 +139,16 @@ namespace DGD203_2
 
             switch (_playerInput)
             {
-                case "W":
+                case "N":
                     _gameMap.MovePlayer(0, 1);
                     break;
                 case "S":
                     _gameMap.MovePlayer(0, -1);
                     break;
-                case "D":
+                case "E":
                     _gameMap.MovePlayer(1, 0);
                     break;
-                case "A":
+                case "W":
                     _gameMap.MovePlayer(-1, 0);
                     break;
                 case "exit":
@@ -283,10 +283,10 @@ namespace DGD203_2
         private string HelpMessage()
         {
             return @"Here are the current commands:
-W: go north
+N: go north
 S: go south
-D: go west
-A: go east
+W: go west
+E: go east
 load: Load saved game
 save: save current game
 exit: exit the game

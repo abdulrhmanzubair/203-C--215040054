@@ -42,7 +42,7 @@ public class Combat
 		Enemies = new List<Enemy>();
 		for (int i = 0; i < numberOfEnemies; i++)
 		{
-			Enemy nextEnemy = new Yokai();
+			Enemy nextEnemy = new Goblin();
 			Enemies.Add(nextEnemy);
 		}
 	}
@@ -72,10 +72,10 @@ public class Combat
 
 	private void GetInput()
 	{
-		Console.WriteLine($"There are {Enemies.Count} yokai(s) in front of you. What do you want to do?");
+		Console.WriteLine($"There are {Enemies.Count} goblin(s) in front of you. What do you want to do?");
 		for (int i = 0; i < Enemies.Count; i++)
 		{
-			Console.WriteLine($"[{i + 1}]: Attack yokai {i + 1}");
+			Console.WriteLine($"[{i + 1}]: Attack goblin {i + 1}");
 		}
 		Console.WriteLine($"[{Enemies.Count + 1}]: Try to flee (50% chance)");
 		_playerInput = Console.ReadLine();
@@ -145,7 +145,7 @@ public class Combat
 			EndCombat();
 		} else
 		{
-			Console.WriteLine("You cannot flee because a yokai is in your way");
+			Console.WriteLine("You cannot flee because a goblin is in your way");
 		}
 	}
 
@@ -155,11 +155,11 @@ public class Combat
 		int playerDamage = Player.Damage();
 
 		Enemies[enemyIndex].TakeDamage(playerDamage);
-		Console.WriteLine($"The yokai takes {playerDamage} damage!");
+		Console.WriteLine($"The goblin takes {playerDamage} damage!");
 
 		if (Enemies[enemyIndex].Health <= 0)
 		{
-			Console.WriteLine("This yokai is toast!");
+			Console.WriteLine("This goblin is toast!");
 			Enemies.RemoveAt(enemyIndex);
 		}
 	}
@@ -174,8 +174,8 @@ public class Combat
 
 		for (int i = 0; i < Enemies.Count; i++)
 		{
-			int yokaiDamage = Enemies[i].Damage;
-			Player.TakeDamage(yokaiDamage);
+			int goblinDamage = Enemies[i].Damage;
+			Player.TakeDamage(goblinDamage);
 		}
 	}
 

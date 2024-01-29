@@ -21,14 +21,14 @@ public class Map
 		_theGame = game;
 
 		// Setting the width boundaries
-		int widthBoundary = (width - 4) / 4;
+		int widthBoundary = (width - 1) / 2;
 
         _widthBoundaries = new int[2];
         _widthBoundaries[0] = -widthBoundary;
 		_widthBoundaries[1] = widthBoundary;
 
 		// Setting the height boundaries
-        int heightBoundary = (height - 4) / 4;
+        int heightBoundary = (height - 1) / 2;
 
         _heightBoundaries = new int[2];
 		_heightBoundaries[0] = -heightBoundary;
@@ -81,29 +81,29 @@ public class Map
 		return !(x < _widthBoundaries[0] || x > _widthBoundaries[1] || y < _heightBoundaries[0] || y > _heightBoundaries[1]);
 	}
 
-	#endregion
+    #endregion
 
-	#region Locations
+    #region Locations
 
-	private void GenerateLocations()
-	{
+    private void GenerateLocations()
+    {
         _locations = new Location[6];
 
         Vector2 YotakaLocation = new Vector2(-2, 0);
-		List<Item> YotakaItems = new List<Item>();
-		YotakaItems.Add(Item.Coin);
+        List<Item> YotakaItems = new List<Item>();
+        YotakaItems.Add(Item.CharmOfProtection);
         Location Yotaka = new Location("Yotaka", LocationType.City, YotakaLocation, YotakaItems);
         _locations[0] = Yotaka;
 
         Vector2 TsunaaiLocation = new Vector2(-2, 4);
-		List<Item> TsunaaiItems = new List<Item>();
-		TsunaaiItems.Add(Item.Charm);
+        List<Item> TsunaaiItems = new List<Item>();
+        TsunaaiItems.Add(Item.SplinterOfMurasama);
         Location Tsunaai = new Location("Tsunaai", LocationType.City, TsunaaiLocation, TsunaaiItems);
         _locations[1] = Tsunaai;
 
         Vector2 HerataKeLocation = new Vector2(3, -2);
-		List<Item> HerataKeItems = new List<Item>();
-		HerataKeItems.Add(Item.Rune);
+        List<Item> HerataKeItems = new List<Item>();
+        HerataKeItems.Add(Item.tearsOfTheMoonGod);
         Location HerataKe = new Location("HerataKe", LocationType.City, HerataKeLocation, HerataKeItems);
         _locations[2] = HerataKe;
 
@@ -111,9 +111,9 @@ public class Map
         Location Inazona = new Location("Inazona", LocationType.City, InazonaLocation);
         _locations[3] = Inazona;
 
-		Vector2 firstCombatLocation = new Vector2(-1, 1);
-		Location firstCombat = new Location("First Combat", LocationType.Combat, firstCombatLocation);
-		_locations[4] = firstCombat;
+        Vector2 firstCombatLocation = new Vector2(-1, 1);
+        Location firstCombat = new Location("First Combat", LocationType.Combat, firstCombatLocation);
+        _locations[4] = firstCombat;
 
         Vector2 secondCombatLocation = new Vector2(-4, 2);
         Location secondCombat = new Location("Second Combat", LocationType.Combat, secondCombatLocation);
@@ -121,7 +121,8 @@ public class Map
 
     }
 
-	public void CheckForLocation(Vector2 coordinates)
+
+    public void CheckForLocation(Vector2 coordinates)
 	{
         Console.WriteLine($"You are now standing on {_coordinates[0]},{_coordinates[1]}");
 
