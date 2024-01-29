@@ -21,14 +21,14 @@ public class Map
 		_theGame = game;
 
 		// Setting the width boundaries
-		int widthBoundary = (width - 1) / 2;
+		int widthBoundary = (width - 4) / 4;
 
         _widthBoundaries = new int[2];
         _widthBoundaries[0] = -widthBoundary;
 		_widthBoundaries[1] = widthBoundary;
 
 		// Setting the height boundaries
-        int heightBoundary = (height - 1) / 2;
+        int heightBoundary = (height - 4) / 4;
 
         _heightBoundaries = new int[2];
 		_heightBoundaries[0] = -heightBoundary;
@@ -89,33 +89,33 @@ public class Map
 	{
         _locations = new Location[6];
 
-        Vector2 gristolLocation = new Vector2(0, 0);
-		List<Item> gristolItems = new List<Item>();
-		gristolItems.Add(Item.Coin);
-        Location gristol = new Location("Gristol", LocationType.City, gristolLocation, gristolItems);
-        _locations[0] = gristol;
+        Vector2 YotakaLocation = new Vector2(-2, 0);
+		List<Item> YotakaItems = new List<Item>();
+		YotakaItems.Add(Item.Coin);
+        Location Yotaka = new Location("Yotaka", LocationType.City, YotakaLocation, YotakaItems);
+        _locations[0] = Yotaka;
 
-        Vector2 tyviaLocation = new Vector2(-2, 2);
-		List<Item> tyviaItems = new List<Item>();
-		tyviaItems.Add(Item.Charm);
-        Location tyvia = new Location("Tyvia", LocationType.City, tyviaLocation, tyviaItems);
-        _locations[1] = tyvia;
+        Vector2 TsunaaiLocation = new Vector2(-2, 4);
+		List<Item> TsunaaiItems = new List<Item>();
+		TsunaaiItems.Add(Item.Charm);
+        Location Tsunaai = new Location("Tsunaai", LocationType.City, TsunaaiLocation, TsunaaiItems);
+        _locations[1] = Tsunaai;
 
-        Vector2 serkonosLocation = new Vector2(1, -2);
-		List<Item> serkonosItems = new List<Item>();
-		serkonosItems.Add(Item.Rune);
-        Location serkonos = new Location("Serkonos", LocationType.City, serkonosLocation, serkonosItems);
-        _locations[2] = serkonos;
+        Vector2 HerataKeLocation = new Vector2(3, -2);
+		List<Item> HerataKeItems = new List<Item>();
+		HerataKeItems.Add(Item.Rune);
+        Location HerataKe = new Location("HerataKe", LocationType.City, HerataKeLocation, HerataKeItems);
+        _locations[2] = HerataKe;
 
-        Vector2 morleyLocation = new Vector2(1, 1);
-        Location morley = new Location("Morley", LocationType.City, morleyLocation);
-        _locations[3] = morley;
+        Vector2 InazonaLocation = new Vector2(-4, -3);
+        Location Inazona = new Location("Inazona", LocationType.City, InazonaLocation);
+        _locations[3] = Inazona;
 
-		Vector2 firstCombatLocation = new Vector2(-2, 1);
+		Vector2 firstCombatLocation = new Vector2(-1, 1);
 		Location firstCombat = new Location("First Combat", LocationType.Combat, firstCombatLocation);
 		_locations[4] = firstCombat;
 
-        Vector2 secondCombatLocation = new Vector2(-1, -1);
+        Vector2 secondCombatLocation = new Vector2(-4, 2);
         Location secondCombat = new Location("Second Combat", LocationType.Combat, secondCombatLocation);
         _locations[5] = secondCombat;
 
