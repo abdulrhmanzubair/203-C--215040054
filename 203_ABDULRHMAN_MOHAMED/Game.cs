@@ -124,6 +124,8 @@ namespace DGD203_2
             }
         }
 
+
+
         private void GetInput()
         {
             _playerInput = Console.ReadLine();
@@ -172,7 +174,7 @@ namespace DGD203_2
                     Console.Clear();
                     break;
                 case "who":
-                    Console.WriteLine($"You are {Player.Name}, the mighty hero of the Isles");
+                    Console.WriteLine($"You are {Player.Name}, guardian of our realm against Yokaies");
                     break;
                 case "take":
                     _gameMap.TakeItem(Player, _gameMap.GetCoordinates());

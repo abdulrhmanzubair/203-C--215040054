@@ -121,6 +121,10 @@ public class Map
         Location secondCombat = new Location("Second Combat", LocationType.Combat, secondCombatLocation);
         _locations[5] = secondCombat;
 
+        Vector2 ThirdCombatLocation = new Vector2(0, 0);
+        Location ThirdCombat = new Location("Third Combat", LocationType.Combat, ThirdCombatLocation);
+        _locations[6] = ThirdCombat;
+
     }
 
 
