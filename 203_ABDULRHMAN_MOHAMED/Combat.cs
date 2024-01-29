@@ -72,7 +72,7 @@ public class Combat
 
 	private void GetInput()
 	{
-		Console.WriteLine($"There are {Enemies.Count} goblin(s) in front of you. What do you want to do?");
+		Console.WriteLine($"There are {Enemies.Count} Yokaie(s) in front of you. What do you want to do?");
 		for (int i = 0; i < Enemies.Count; i++)
 		{
 			Console.WriteLine($"[{i + 1}]: Attack goblin {i + 1}");
@@ -99,7 +99,7 @@ public class Combat
 		{
 			if (value > Enemies.Count + 1)
 			{
-				Console.WriteLine("That is not a valid choice");
+				Console.WriteLine("THAT IS NOT A CHOICE");
 			} else
 			{
 				if (value == Enemies.Count + 1) 
@@ -112,7 +112,7 @@ public class Combat
 			}
 		} else // When the command is not an integer
 		{
-			Console.WriteLine("You don't make any sense. Quit babbling, they are going to kill you!");
+			Console.WriteLine("DO NOT DISHONER YOUR SELF!");
 		}
 	}
 
@@ -155,11 +155,11 @@ public class Combat
 		int playerDamage = Player.Damage();
 
 		Enemies[enemyIndex].TakeDamage(playerDamage);
-		Console.WriteLine($"The goblin takes {playerDamage} damage!");
+		Console.WriteLine($"The Yokai takes {playerDamage} damage!");
 
 		if (Enemies[enemyIndex].Health <= 0)
 		{
-			Console.WriteLine("This goblin is toast!");
+			Console.WriteLine("CURSE EXORCISED!");
 			Enemies.RemoveAt(enemyIndex);
 		}
 	}

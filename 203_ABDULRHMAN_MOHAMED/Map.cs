@@ -39,8 +39,10 @@ public class Map
 
 		GenerateLocations();
 
-		// Display result message
-		Console.WriteLine($"Created map with size {width}x{height}");
+        // Display result message
+        Console.WriteLine($"WELCOME TO YOKAI INSLAUGHT!");
+        Console.WriteLine($"Collect the items of power scatterd througout this realm to extermanate the plauge of Yokaies!");
+        Console.WriteLine($"the realm is this {width}x{height} in size, tread carfully");
     }
 
     #region Coordinates
